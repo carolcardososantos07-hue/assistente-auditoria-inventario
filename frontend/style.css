@@ -1,0 +1,88 @@
+/* ESTILIZAÇÃO RESPONSIVA - ASSISTENTE DE AUDITORIA 
+   Foco em Usabilidade no Chão de Fábrica (Mobile-First)
+*/
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #27ae60;
+    --error-color: #e74c3c;
+    --background: #f4f7f6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--primary-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Layout Principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Cards de Auditoria - Requisito de Design Moderno */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.divergencia {
+    color: var(--error-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Botão Estilizado */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* MEDIA QUERIES - Prova de Responsividade do Relatório */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.2rem;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+}
