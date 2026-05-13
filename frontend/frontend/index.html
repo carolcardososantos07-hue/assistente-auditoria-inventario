@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de Auditoria</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f9; display: flex; justify-content: center; padding: 20px; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+        h1 { color: #2c3e50; font-size: 1.5rem; }
+        .card { border-bottom: 1px solid #eee; padding: 10px 0; }
+        .status { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>🔍 Assistente de Auditoria</h1>
+        <p>Status do Sistema: <span class="status">Conectado ao PostgreSQL</span></p>
+        
+        <div class="card">
+            <h3>Produto: Monitor 24 Pol</h3>
+            <p>Saldo Sistema: 50 | <strong>Saldo Físico: 48</strong></p>
+            <p style="color: red;">Divergência: -2</p>
+        </div>
+
+        <button @click="alert('Sincronizando com Banco de Dados...')">Sincronizar Dados</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp } = Vue
+        createApp({
+            data() { return { message: 'Iniciado' } }
+        }).mount('#app')
+    </script>
+</body>
+</html>
